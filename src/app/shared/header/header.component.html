@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+    <button (click)="toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+        &nbsp;
+        <span >My App</span>
+    </button>
+   
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+        <ul fxLayout="row" fxLayoutGap="20px">
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                </button>
+
+            </li>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>help_outline</mat-icon>
+                </button>
+
+            </li>
+            <li>
+
+                <button mat-button [matMenuTriggerFor]="menu" class="customize1"> 
+                    <button mat-icon-button>
+                        <mat-icon  style="color:white ;">person_outline</mat-icon>
+                    </button>
+                </button>
+
+                <mat-menu #menu="matMenu" class="customize">
+                    <button mat-menu-item>
+                        <button mat-icon-button>
+                            <mat-icon>exit_to_app</mat-icon>
+                        </button>
+                        Signout
+                    </button>
+                    
+                </mat-menu>
+
+
+            </li>
+
+
+
+        </ul>
+
+    </div>
+
+</mat-toolbar>

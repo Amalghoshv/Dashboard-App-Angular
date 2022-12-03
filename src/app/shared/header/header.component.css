@@ -1,0 +1,6 @@
+ul li{
+    list-style: none;
+}
+::ng-deep .customize {
+    background: red;
+  }
